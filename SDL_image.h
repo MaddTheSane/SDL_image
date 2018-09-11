@@ -76,19 +76,19 @@ extern "C" {
  */
 extern DECLSPEC const SDL_version * SDLCALL IMG_Linked_Version(void);
 
-typedef enum
+typedef SDL_OPTIONS(int, IMG_InitFlags)
 {
     IMG_INIT_JPG = 0x00000001,
     IMG_INIT_PNG = 0x00000002,
     IMG_INIT_TIF = 0x00000004,
     IMG_INIT_WEBP = 0x00000008
-} IMG_InitFlags;
+};
 
 /* Loads dynamic libraries and prepares them for use.  Flags should be
    one or more flags from IMG_InitFlags OR'd together.
    It returns the flags successfully initialized, or 0 on failure.
  */
-extern DECLSPEC int SDLCALL IMG_Init(int flags);
+extern DECLSPEC IMG_InitFlags SDLCALL IMG_Init(IMG_InitFlags flags);
 
 /* Unloads libraries loaded with IMG_Init */
 extern DECLSPEC void SDLCALL IMG_Quit(void);
