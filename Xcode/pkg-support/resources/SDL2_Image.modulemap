@@ -1,0 +1,5 @@
+framework module SDL2_Image {
+	umbrella header "SDL_image.h"
+	export * 
+	module * { export * }
+}

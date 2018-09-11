@@ -24,9 +24,18 @@
 #ifndef SDL_IMAGE_H_
 #define SDL_IMAGE_H_
 
+#ifndef __has_feature
+#  define __has_feature(X) 0
+#endif
+#if __has_feature(modules)
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_version.h>
+#include <SDL2/begin_code.h>
+#else
 #include "SDL.h"
 #include "SDL_version.h"
 #include "begin_code.h"
+#endif
 
 /* Set up for C function definitions, even when using C++ */
 #ifdef __cplusplus
@@ -156,6 +165,10 @@ extern DECLSPEC int SDLCALL IMG_SaveJPG_RW(SDL_Surface *surface, SDL_RWops *dst,
 #ifdef __cplusplus
 }
 #endif
+#if __has_feature(modules)
+#include <SDL2/close_code.h>
+#else
 #include "close_code.h"
+#endif
 
 #endif /* SDL_IMAGE_H_ */

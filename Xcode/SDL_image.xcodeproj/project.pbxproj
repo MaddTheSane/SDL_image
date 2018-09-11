@@ -76,6 +76,7 @@
 /* Begin PBXFileReference section */
 		007288A60F0DA79800C302A9 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
 		1014BAEA010A4B677F000001 /* SDL_image.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = SDL_image.h; path = ../SDL_image.h; sourceTree = SOURCE_ROOT; };
+		551B0F1F2148192C00895306 /* SDL2_Image.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = SDL2_Image.modulemap; sourceTree = "<group>"; };
 		61F85449145A19BC002CA294 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AA50AA461F9C7C50003B9C0C /* IMG_svg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = IMG_svg.c; path = ../IMG_svg.c; sourceTree = "<group>"; };
 		AA579DE2161C07E6005F809B /* IMG_bmp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = IMG_bmp.c; path = ../IMG_bmp.c; sourceTree = "<group>"; };
@@ -223,6 +224,7 @@
 			children = (
 				F59C710300D5CB5801000001 /* ReadMe.txt */,
 				F59C710400D5CB5801000001 /* Welcome.txt */,
+				551B0F1F2148192C00895306 /* SDL2_Image.modulemap */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -497,7 +499,7 @@
 					/Library/Frameworks/SDL.framework/Headers,
 				);
 				HEADER_SEARCH_PATHS_QUOTED = "\"$(SRCROOT)/Frameworks/webp.framework/Headers\"";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = SDL2_image;
 				SDKROOT = macosx;
@@ -521,6 +523,7 @@
 				INSTALL_PATH = "@rpath";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULEMAP_FILE = "pkg-support/resources/SDL2_Image.modulemap";
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					webp,
@@ -622,7 +625,7 @@
 					/Library/Frameworks/SDL.framework/Headers,
 				);
 				HEADER_SEARCH_PATHS_QUOTED = "\"$(SRCROOT)/Frameworks/webp.framework/Headers\"";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = SDL2_image;
 				SDKROOT = macosx;
 				SEPARATE_STRIP = YES;
@@ -647,6 +650,7 @@
 				INSTALL_PATH = "@rpath";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULEMAP_FILE = "pkg-support/resources/SDL2_Image.modulemap";
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					webp,
